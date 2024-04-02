@@ -3,6 +3,7 @@ def contact_manager():
     condition = True
     while condition:
         icon = input("search, menu or add?")
+        
         if icon == "search":
             name = input("Enter your name:")
             print(contacts.get(name, f'{name} has not exist!'))

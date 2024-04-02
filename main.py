@@ -2,18 +2,20 @@ def contact_manager():
     contacts = {}
     condition = True
     while condition:
-        icon = input("search, menu or add?")
-        if icon == "search":
+        message = 'choose one options below:\n1.add \n2.search\n3.menu\n4.exit'
+        icon = input(message)
+
+        if icon == "2":
             name = input("Enter your name:")
             print(contacts.get(name, f'{name} has not exist!'))
-        if icon == "add":
+        elif icon == "1":
             name = input("Write name contact:")
             number = input("Enter number phon:")
             contacts[name] = number
-        if icon == "menu":
+        elif icon == "3":
             for contact in contacts:
                 print(contact, contacts[contact])
-        if icon == "exit":
+        elif icon == "4":
             condition = False
 
 contact_manager()
